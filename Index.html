@@ -1,0 +1,451 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Prosperar com Deus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800;900&display=swap">
+<style>
+/* Layout: página de venda longa, faixas alternadas escuro (navy) e claro (marfim), hero com pôr do sol e livro em destaque */
+:root {
+  color-scheme: dark;
+  --navy: #0a1428;
+  --navy-2: #101d38;
+  --gold: #e2ae45;
+  --gold-hi: #f7d884;
+  --cream: #f8f5ee;
+  --ink: #0e1a33;
+  --muted: #5b6477;
+  --line: #e3dccb;
+  --on-dark: #f3efe6;
+  --on-dark-soft: #b9c0d0;
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --script: "Caveat", "Segoe Script", cursive;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy);
+  color: var(--on-dark);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-inline: 0;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+
+/* ---------- Header ---------- */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(10, 20, 40, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 174, 69, .35);
+}
+.top .wrap { display: flex; align-items: center; gap: 20px; min-height: 58px; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.brand svg { width: 30px; height: 30px; flex: none; }
+.brand i { width: 1px; height: 18px; background: rgba(255,255,255,.3); }
+.brand span.e { color: var(--on-dark-soft); font-weight: 500; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 26px; font-size: 12px; font-weight: 500; }
+.nav a:hover { color: var(--gold-hi); }
+.nav .buy { background: var(--gold); color: var(--navy); font-weight: 700; padding: 9px 18px; border-radius: 999px; letter-spacing: .04em; text-transform: uppercase; font-size: 11px; }
+.nav .buy:hover { background: var(--gold-hi); color: var(--navy); }
+@media (max-width: 860px) { .nav a:not(.buy) { display: none; } .brand i, .brand span.e { display: none; } }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(60% 55% at 78% 62%, rgba(255, 150, 60, .55), rgba(255, 150, 60, 0) 70%),
+    radial-gradient(40% 30% at 90% 40%, rgba(255, 205, 120, .25), rgba(255,205,120,0) 70%),
+    linear-gradient(180deg, #08101f 0%, #101c38 45%, #3a2c3c 78%, #6b3d2a 100%);
+}
+.hero-art { position: absolute; inset: auto 0 0 0; width: 100%; height: 46%; min-height: 220px; pointer-events: none; }
+.cross { position: absolute; right: 2%; top: 14%; width: 120px; opacity: .9; pointer-events: none; }
+.hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 24px; padding-block: 52px 40px; align-items: center; }
+.eyebrow { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(54px, 9vw, 112px); line-height: .92; font-weight: 800; margin-top: 18px; letter-spacing: -.01em; }
+.hero h1 .l1 { display: block; color: #fff; }
+.hero h1 .l2 { display: flex; align-items: baseline; gap: .12em; }
+.hero h1 .com { font-size: .5em; color: var(--gold); font-weight: 700; }
+.hero h1 .deus { font-weight: 900; background: linear-gradient(180deg, var(--gold-hi), #c8872a 85%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero .sub { font-family: var(--display); font-size: clamp(20px, 2.6vw, 28px); line-height: 1.25; margin-top: 18px; font-weight: 600; max-width: 22em; }
+.hero .lead { margin-top: 18px; max-width: 34em; color: #e7e3d8; font-size: 15px; font-weight: 500; }
+.pills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 26px; max-width: 520px; }
+.pill { text-align: center; padding: 4px 8px; font-size: 10.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; line-height: 1.3; }
+.pill + .pill { border-left: 1px solid rgba(226,174,69,.45); }
+.pill svg { width: 34px; height: 34px; display: block; margin: 0 auto 8px; }
+
+.stage { position: relative; min-height: 460px; display: flex; align-items: center; justify-content: center; }
+.book {
+  position: relative; width: min(300px, 62%); aspect-ratio: 3 / 4.15; flex: none;
+  border-radius: 4px 10px 10px 4px;
+  background: linear-gradient(160deg, #101f3c, #0a1428 60%);
+  box-shadow: -10px 0 0 -2px #060c1a, 24px 28px 50px rgba(0,0,0,.55), inset 0 0 0 1px rgba(226,174,69,.25);
+  padding: 7% 8% 6%; text-align: center; transform: rotate(1.5deg);
+  display: flex; flex-direction: column; align-items: center;
+}
+.book::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6%; background: linear-gradient(90deg, rgba(0,0,0,.45), rgba(255,255,255,.06)); border-radius: 4px 0 0 4px; }
+.book .tag { font-size: clamp(7px, 1.1vw, 9px); letter-spacing: .3em; color: var(--on-dark-soft); font-weight: 600; }
+.book .t1 { font-family: var(--display); font-weight: 800; color: #fff; font-size: clamp(24px, 4.2vw, 40px); line-height: 1; margin-top: 8%; }
+.book .t2 { font-family: var(--display); font-weight: 700; color: var(--gold); font-size: clamp(14px, 2.2vw, 22px); line-height: 1; margin-top: 2%; }
+.book .t3 { font-family: var(--display); font-weight: 900; color: var(--gold); font-size: clamp(30px, 5.4vw, 54px); line-height: 1; background: linear-gradient(180deg, var(--gold-hi), #c8872a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.book .t4 { font-family: var(--display); font-size: clamp(8px, 1.3vw, 11px); color: #dfe3ee; margin-top: 6%; line-height: 1.3; }
+.book svg.plant { width: 62%; margin-top: auto; }
+.book .ed { font-size: clamp(6px, .9vw, 8px); letter-spacing: .25em; color: var(--on-dark-soft); margin-top: 4%; }
+.phone {
+  position: absolute; left: 2%; bottom: 6%; width: min(150px, 30%); aspect-ratio: 9 / 18.5;
+  border-radius: 20px; background: #05080f; border: 3px solid #1b2236; padding: 8px 7px;
+  box-shadow: 14px 20px 36px rgba(0,0,0,.55); z-index: 2; transform: rotate(-2deg);
+}
+.phone .scr { height: 100%; border-radius: 12px; background: linear-gradient(170deg, #12244a, #0a1428); display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 6px 8px; overflow: hidden; }
+.phone .scr b { font-family: var(--display); font-size: 17px; line-height: 1; color: #fff; }
+.phone .scr b em { display: block; font-style: normal; color: var(--gold); font-size: 11px; }
+.phone .scr small { font-size: 5.5px; color: #cfd6e6; margin-top: 6px; line-height: 1.3; }
+.phone .scr svg { width: 70%; margin-top: auto; }
+.script-quote { position: absolute; right: 0; bottom: 4%; font-family: var(--script); font-size: clamp(18px, 2.2vw, 24px); line-height: 1.1; text-align: left; transform: rotate(-6deg); max-width: 190px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
+.script-quote::after { content: ""; display: block; width: 90px; height: 3px; background: var(--gold); border-radius: 3px; margin-top: 8px; transform: rotate(-3deg); }
+
+.buy-row { position: relative; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding-block: 8px 28px; }
+.price { position: relative; padding: 14px 46px 14px 38px; color: var(--navy); font-weight: 800; line-height: 1; background: linear-gradient(100deg, var(--gold-hi), var(--gold)); clip-path: polygon(0 18%, 4% 6%, 12% 12%, 22% 0, 36% 8%, 52% 2%, 66% 10%, 80% 0, 92% 8%, 100% 20%, 96% 52%, 100% 82%, 90% 96%, 74% 90%, 58% 100%, 40% 92%, 24% 100%, 10% 92%, 3% 98%, 0 80%, 4% 50%); }
+.price small { display: block; font-size: 13px; letter-spacing: .14em; text-align: center; margin-bottom: 4px; }
+.price strong { font-family: var(--body); font-size: clamp(40px, 6vw, 62px); letter-spacing: -.02em; }
+.price strong sub { font-size: .42em; vertical-align: baseline; margin-right: 6px; }
+.price .alt { display: block; font-size: 12px; font-weight: 700; letter-spacing: .06em; margin-top: 8px; text-align: center; }
+.center-cta .alt2 { margin-top: 6px; color: var(--gold-hi); letter-spacing: .08em; }
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: 14px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: var(--navy); font-weight: 800; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; padding: 18px 34px; border-radius: 999px; box-shadow: 0 10px 26px rgba(226,174,69,.28), inset 0 0 0 2px rgba(255,255,255,.35); transition: transform .15s ease, box-shadow .15s ease; }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(226,174,69,.4), inset 0 0 0 2px rgba(255,255,255,.45); }
+.cta:focus-visible, .nav a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.cta svg { width: 22px; height: 22px; flex: none; }
+.trust { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 860px; margin-inline: auto; padding-block: 20px 28px; }
+.trust div { display: flex; align-items: center; gap: 10px; justify-content: center; padding-inline: 12px; font-size: 12px; line-height: 1.3; }
+.trust div + div { border-left: 1px solid rgba(255,255,255,.2); }
+.trust svg { width: 28px; height: 28px; flex: none; }
+.trust b { display: block; font-weight: 700; }
+.trust span { color: var(--on-dark-soft); font-size: 11px; }
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); padding-block: 36px 16px; }
+  .stage { min-height: 420px; }
+  .cross { width: 70px; top: 4%; }
+  .stage { max-width: 560px; margin-inline: auto; width: 100%; }
+}
+@media (max-width: 640px) {
+  .trust { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .trust div + div { border-left: 0; }
+  .trust div { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  .pills { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 16px; }
+  .pill:nth-child(3) { border-left: 0; }
+  .script-quote { display: none; }
+  .cta { width: 100%; padding-inline: 20px; }
+}
+
+/* ---------- Seção clara: diferenciais ---------- */
+.light { background: var(--cream); color: var(--ink); }
+.diff .wrap { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 2fr); gap: 40px; padding-block: 64px; align-items: start; }
+.rule { width: 56px; height: 3px; background: var(--gold); margin-bottom: 18px; }
+.diff h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.05; font-weight: 800; letter-spacing: -.005em; }
+.diff h2 small { display: block; font-family: var(--body); font-size: 17px; font-weight: 800; letter-spacing: .02em; margin-bottom: 4px; text-transform: uppercase; }
+.diff .intro { margin-top: 18px; font-size: 14px; color: var(--muted); }
+.hand { font-family: var(--script); font-size: 30px; line-height: 1; margin-top: 22px; transform: rotate(-5deg); transform-origin: left; display: inline-block; color: var(--ink); }
+.hand::after { content: ""; display: block; width: 130px; height: 3px; background: var(--gold); border-radius: 3px; margin-top: 6px; }
+.feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-left: 1px solid var(--line); }
+.feat { padding: 18px 24px 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.feat:nth-child(n+4) { border-bottom: 0; }
+.feat svg { width: 46px; height: 46px; display: block; margin-bottom: 14px; }
+.feat h3 { font-family: var(--body); font-size: 16px; font-weight: 700; color: var(--ink); }
+.feat h3 em { font-style: normal; color: #b07a17; }
+.feat p { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+@media (max-width: 900px) { .diff .wrap { grid-template-columns: minmax(0, 1fr); padding-block: 44px; } .feat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .feat:nth-child(n+4) { border-bottom: 1px solid var(--line); } .feat:nth-child(n+5) { border-bottom: 0; } }
+@media (max-width: 520px) { .feat-grid { grid-template-columns: minmax(0, 1fr); } .feat:nth-child(n) { border-bottom: 1px solid var(--line); } .feat:last-child { border-bottom: 0; } }
+
+/* ---------- Conteúdo ---------- */
+.content {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(50% 60% at 85% 70%, rgba(255, 150, 60, .5), rgba(255,150,60,0) 70%),
+    linear-gradient(180deg, #0a1428, #111f3d 55%, #2c2a3a);
+}
+.content .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) minmax(0, .85fr); gap: 36px; padding-block: 64px; align-items: center; position: relative; }
+.content h2 { font-size: clamp(26px, 3.2vw, 36px); font-weight: 800; line-height: 1.05; }
+.content .kick { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+.content .intro { margin-top: 14px; font-size: 14px; color: var(--on-dark-soft); }
+.checks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+.checks li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; font-weight: 500; }
+.checks svg { width: 20px; height: 20px; flex: none; margin-top: 1px; }
+.openbook { background: linear-gradient(95deg, #e9e3d3, #fbf8f0 48%, #f1ecdf 52%, #e5dfcd); color: #23201a; border-radius: 6px; padding: 26px 22px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); gap: 20px; box-shadow: 0 24px 44px rgba(0,0,0,.5); transform: perspective(900px) rotateY(-6deg) rotate(-1.5deg); min-width: 0; }
+.openbook h3 { font-family: var(--display); font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.toc { list-style: none; margin: 0; padding: 0; font-size: 10.5px; line-height: 1.35; }
+.toc li { display: flex; align-items: baseline; gap: 6px; padding: 3px 0; border-bottom: 1px dotted rgba(0,0,0,.25); }
+.toc li span { flex: 1; min-width: 0; }
+.toc li b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.toc li.p { font-weight: 700; }
+.fake { display: grid; gap: 5px; align-content: start; }
+.fake i { display: block; height: 4px; border-radius: 2px; background: rgba(0,0,0,.14); }
+.fake i:nth-child(5n) { width: 70%; }
+.fake i:nth-child(7n) { width: 85%; margin-bottom: 8px; }
+.person { position: relative; text-align: center; }
+.person svg.me { width: min(260px, 100%); display: block; margin: 0 auto; }
+.person blockquote { margin: 12px auto 0; font-family: var(--script); font-size: clamp(24px, 3vw, 30px); line-height: 1.05; transform: rotate(-4deg); color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.5); max-width: 240px; }
+@media (max-width: 980px) { .content .wrap { grid-template-columns: minmax(0, 1fr); } .openbook { transform: none; } .person { display: none; } }
+@media (max-width: 520px) { .openbook { grid-template-columns: minmax(0, 1fr); } .fake { display: none; } }
+
+/* ---------- Trechos ---------- */
+.excerpts .wrap { padding-block: 60px; display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 2.3fr); gap: 36px; align-items: start; }
+.excerpts h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; line-height: 1.05; }
+.excerpts .rule { margin-bottom: 18px; }
+.ex-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.ex { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 6px 18px rgba(30, 24, 8, .05); }
+.ex q { font-family: var(--display); font-size: 17px; line-height: 1.35; font-weight: 600; quotes: "“" "”"; color: var(--ink); }
+.ex cite { margin-top: auto; font-style: normal; font-size: 12px; font-weight: 600; color: var(--muted); }
+.ex cite span { display: block; color: #b07a17; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; }
+@media (max-width: 900px) { .excerpts .wrap { grid-template-columns: minmax(0, 1fr); padding-block: 44px; } }
+@media (max-width: 640px) { .ex-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- CTA final ---------- */
+.final { background: var(--navy); border-top: 1px solid rgba(226,174,69,.45); }
+.final .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; padding-block: 44px; align-items: center; }
+.guar { display: flex; gap: 16px; align-items: center; }
+.guar svg { width: 64px; height: 64px; flex: none; }
+.guar h3 { font-family: var(--body); color: var(--gold); font-size: 22px; font-weight: 800; line-height: 1.05; letter-spacing: .02em; text-transform: uppercase; }
+.guar p { font-size: 12px; color: var(--on-dark-soft); margin-top: 8px; }
+.center-cta { text-align: center; border-inline: 1px solid rgba(255,255,255,.15); padding-inline: 24px; }
+.center-cta h2 { font-family: var(--display); font-size: clamp(20px, 2.4vw, 26px); font-weight: 700; line-height: 1.15; text-transform: uppercase; letter-spacing: .01em; }
+.center-cta .cta { margin-top: 18px; width: 100%; font-size: 14px; padding-inline: 22px; }
+.center-cta .only { display: block; margin-top: 14px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.perks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; font-size: 13px; font-weight: 500; }
+.perks li { display: flex; gap: 12px; align-items: center; }
+.perks svg { width: 22px; height: 22px; flex: none; }
+@media (max-width: 900px) { .final .wrap { grid-template-columns: minmax(0, 1fr); } .center-cta { border-inline: 0; border-block: 1px solid rgba(255,255,255,.15); padding: 28px 0; } .perks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .perks { grid-template-columns: minmax(0, 1fr); } .hero h1 { font-size: clamp(46px, 15vw, 64px); } .buy-row { gap: 18px; } .stage { min-height: 400px; } }
+
+footer { background: #060d1c; border-top: 1px solid rgba(226,174,69,.3); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 16px 24px; justify-content: space-between; align-items: center; padding-block: 22px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-soft); }
+footer .sig { font-family: var(--script); font-size: 26px; letter-spacing: 0; text-transform: none; color: var(--gold-hi); }
+.legal { background: #060d1c; color: #8d96ab; font-size: 11px; line-height: 1.6; padding: 0 0 26px; }
+.legal .wrap { padding-top: 0; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7d884"/><stop offset="1" stop-color="#c8872a"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Prosperar com Deus">
+      <svg viewBox="0 0 40 40" fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round"><path d="M20 12c-4-3-9-3-14-2v20c5-1 10-1 14 2 4-3 9-3 14-2V10c-5-1-10-1-14 2z"/><path d="M20 12v20"/></svg>
+      Prosperar com Deus <i></i> <span class="e">E-book</span>
+    </a>
+    <nav class="nav">
+      <a href="#topo">Início</a>
+      <a href="#livro">Sobre o livro</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#trechos">Trechos</a>
+      <a class="buy" data-buy href="#comprar">Comprar agora</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero" id="livro">
+  <svg class="hero-art" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 250 L120 190 L230 235 L360 150 L470 215 L600 130 L720 210 L850 120 L980 205 L1110 150 L1240 215 L1360 170 L1440 210 V360 H0Z" fill="#1a1d33" opacity=".75"/>
+    <path d="M0 300 L140 250 L260 290 L400 225 L540 285 L690 240 L840 295 L990 235 L1140 290 L1290 245 L1440 285 V360 H0Z" fill="#0f1426"/>
+    <path d="M0 340 L200 310 L420 335 L700 305 L980 335 L1220 312 L1440 336 V360 H0Z" fill="#080d1b"/>
+    <g fill="#f4b95a" opacity=".55">
+      <rect x="1010" y="262" width="4" height="10"/><rect x="1030" y="258" width="4" height="14"/><rect x="1052" y="264" width="4" height="8"/><rect x="1080" y="260" width="4" height="12"/><rect x="1110" y="266" width="4" height="8"/><rect x="1150" y="262" width="4" height="10"/>
+    </g>
+  </svg>
+  <svg class="cross" viewBox="0 0 100 220" aria-hidden="true"><path d="M44 0h12v62h40v12H56v146H44V74H4V62h40z" fill="#120f1c"/></svg>
+
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Transforme sua vida financeira com princípios bíblicos</p>
+      <h1><span class="l1">PROSPERAR</span><span class="l2"><span class="com">COM</span><span class="deus">DEUS</span></span></h1>
+      <p class="sub">Como crescer financeiramente sem perder o que realmente importa</p>
+      <p class="lead">Um guia prático e espiritual para você aprender a administrar o que tem, construir seu futuro, prosperar com sabedoria e viver o propósito de Deus em todas as áreas da sua vida.</p>
+      <div class="pills">
+        <div class="pill"><svg viewBox="0 0 40 40" fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round"><path d="M20 12c-4-3-9-3-14-2v20c5-1 10-1 14 2 4-3 9-3 14-2V10c-5-1-10-1-14 2z"/><path d="M20 12v20"/></svg>Princípios bíblicos</div>
+        <div class="pill"><svg viewBox="0 0 40 40" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8c-5-3-11 0-11 6 0 2 1 3 1 4-2 2-2 5 0 7 0 4 4 6 8 5 4 1 8-1 8-5 2-2 2-5 0-7 0-1 1-2 1-4 0-6-6-9-11-6zM20 8v24M14 16h6M20 22h6M14 26h6"/></svg>Transformação da mente</div>
+        <div class="pill"><svg viewBox="0 0 40 40" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 33h26M10 33V24h5v9M18 33V17h5v16M26 33V10h5v23"/></svg>Planejamento financeiro</div>
+        <div class="pill"><svg viewBox="0 0 40 40" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="9" r="3.5"/><circle cx="27" cy="9" r="3.5"/><path d="M8 33V20c0-4 2-6 5-6s5 2 5 6v13M22 33V20c0-4 2-6 5-6s5 2 5 6v13M11 26h4M25 26h4"/></svg>Família e propósito</div>
+      </div>
+    </div>
+
+    <div class="stage" aria-label="Capa do e-book Prosperar com Deus">
+      <div class="phone" aria-hidden="true"><div class="scr"><b>PROSPERAR<em>COM DEUS</em></b><small>Como crescer financeiramente<br>sem perder o que realmente importa</small>
+        <svg viewBox="0 0 100 80" fill="none"><path d="M50 52V28" stroke="#6cc070" stroke-width="2.5" stroke-linecap="round"/><path d="M50 36c-10 0-16-6-17-14 9 0 16 5 17 14zM50 30c8-1 14-6 15-13-8 0-14 5-15 13z" fill="#4fae5d"/><ellipse cx="50" cy="62" rx="26" ry="5" fill="url(#g)"/><ellipse cx="50" cy="56" rx="22" ry="4.5" fill="#f1c45e"/><ellipse cx="50" cy="51" rx="18" ry="4" fill="#f7d884"/></svg></div></div>
+      <div class="book">
+        <span class="tag">E-BOOK</span>
+        <span class="t1">PROSPERAR</span>
+        <span class="t2">COM</span>
+        <span class="t3">DEUS</span>
+        <span class="t4">Como crescer financeiramente<br>sem perder o que realmente importa</span>
+        <svg class="plant" viewBox="0 0 160 110" fill="none"><path d="M80 78V40" stroke="#6cc070" stroke-width="3" stroke-linecap="round"/><path d="M80 52C62 52 52 42 50 28c16 0 28 8 30 24zM80 44c14-1 24-9 26-21-14 0-25 8-26 21z" fill="#4fae5d"/><g fill="url(#g)"><ellipse cx="80" cy="96" rx="40" ry="8"/><ellipse cx="80" cy="88" rx="34" ry="7" fill="#f1c45e"/><ellipse cx="80" cy="80" rx="28" ry="6" fill="#f7d884"/><ellipse cx="116" cy="90" rx="14" ry="4" fill="#d79a35"/><ellipse cx="116" cy="84" rx="12" ry="3.6" fill="#f1c45e"/></g></svg>
+        <span class="ed">EDIÇÃO DIGITAL</span>
+      </div>
+      <p class="script-quote">Deus não te chama apenas para ter, mas para fazer a diferença.</p>
+    </div>
+  </div>
+
+  <div class="wrap buy-row" id="comprar">
+    <div class="price"><small>APENAS</small><strong><sub>R$</sub>10,00</strong><span class="alt">≈ 127 MT &nbsp;·&nbsp; ≈ € 1,76</span></div>
+    <a class="cta" data-buy href="#comprar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/></svg>Quero meu e-book agora<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></a>
+  </div>
+  <div class="wrap trust">
+    <div><svg viewBox="0 0 28 28" fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round"><rect x="6" y="12" width="16" height="12" rx="2"/><path d="M10 12V9a4 4 0 0 1 8 0v3"/></svg><p><b>Compra segura</b><span>Seus dados protegidos</span></p></div>
+    <div><svg viewBox="0 0 28 28" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19a5 5 0 0 1 .5-10 6.5 6.5 0 0 1 12.5 1.5A4.2 4.2 0 0 1 20 19"/><path d="M14 13v9M10.5 18.5 14 22l3.5-3.5"/></svg><p><b>Acesso imediato</b><span>Receba agora mesmo</span></p></div>
+    <div><svg viewBox="0 0 28 28" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l9 3.5v6.5c0 5.5-3.800 9.200-9 11-5.200-1.800-9-5.500-9-11V6.500z"/><path d="M10 14l3 3 5.500-6"/></svg><p><b>Garantia de 7 dias</b><span>Satisfação garantida</span></p></div>
+  </div>
+</section>
+
+<section class="light diff" id="beneficios">
+  <div class="wrap">
+    <div>
+      <div class="rule"></div>
+      <h2><small>Por que este e-book</small>É DIFERENTE?</h2>
+      <p class="intro">Este não é apenas um livro sobre dinheiro. É um guia completo que une fé, sabedoria e planejamento para te ajudar a prosperar de forma integral: financeira, emocional, familiar e espiritual.</p>
+      <p class="hand">Mais do que dinheiro, é sobre propósito!</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#d29a2e" stroke-width="2" stroke-linejoin="round"><path d="M23 13c-4.500-3.500-10-3.500-16-2v23c6-1.500 11.500-1.500 16 2 4.500-3.500 10-3.500 16-2V11c-6-1.500-11.500-1.500-16 2z"/><path d="M23 13v23"/></svg>
+        <h3>Baseado na Bíblia</h3><p>Princípios eternos para aplicação no seu dia a dia.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#d29a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 8c-6-3.500-13 0-13 7 0 2 1 3.500 1.500 5-2.500 2.500-2.500 6 0 8 0 4.500 4.500 7 9.500 6 5 1 9.500-1.500 9.500-6 2.500-2 2.500-5.500 0-8 .5-1.500 1.500-3 1.500-5 0-7-7-10.500-13-7zM23 8v28M16 17h7M23 24h7M16 30h7"/></svg>
+        <h3>Transforma sua mente</h3><p>Saia da mentalidade de escassez e viva com mais fé e confiança.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#d29a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38h30M11 38V27h6v11M20 38V19h6v19M29 38V10h6v28"/><path d="M10 20l8-6 6 3 11-9"/></svg>
+        <h3>Ensina o passo a passo</h3><p>Do planejamento ao investimento, tudo de forma simples e prática.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#d29a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="10" r="4"/><circle cx="31" cy="10" r="4"/><path d="M9 38V23c0-4.500 2.500-7 6-7s6 2.500 6 7v15M25 38V23c0-4.500 2.500-7 6-7s6 2.500 6 7v15M12 30h5M28 30h5"/></svg>
+        <h3>Fortalece sua família</h3><p>Promove equilíbrio, união e decisões mais sábias.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#d29a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 5l15 6v10c0 9-6 15-15 19C14 36 8 30 8 21V11z"/><path d="M16 22l5 5 9-10"/></svg>
+        <h3>Te protege <em>de golpes</em></h3><p>Aprenda a identificar riscos e evitar falsas promessas.</p>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#d29a2e" stroke-width="2" stroke-linejoin="round"><path d="M23 39S7 29 7 17c0-5 3.500-8.500 8-8.500 3.500 0 6.500 2 8 5 1.500-3 4.500-5 8-5 4.500 0 8 3.500 8 8.500 0 12-16 22-16 22z"/></svg>
+        <h3>Te ajuda a deixar um legado</h3><p>Prosperar é também abençoar as próximas gerações.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content" id="conteudo">
+  <div class="wrap">
+    <div>
+      <span class="kick">Conteúdo do e-book</span>
+      <h2>O QUE VOCÊ VAI ENCONTRAR?</h2>
+      <p class="intro">Um conteúdo completo, dividido em 6 partes, com 40 capítulos práticos e transformadores.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>A verdadeira prosperidade</li>
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>Transformação da mente</li>
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>Princípios bíblicos para a vida financeira</li>
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>Construindo prosperidade</li>
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>Prosperidade com propósito</li>
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>Plano de transformação (30 e 90 dias)</li>
+        <li><svg viewBox="0 0 20 20"><path d="M3 10.500l4.500 4.500L17 5" fill="none" stroke="#f1c45e" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>Lista de hábitos, perguntas de reflexão e orações finais</li>
+      </ul>
+    </div>
+
+    <div class="openbook" role="img" aria-label="Sumário do e-book">
+      <div>
+        <h3>Sumário</h3>
+        <ul class="toc">
+          <li><span>Introdução</span><b>6</b></li>
+          <li class="p"><span>Parte 1 · A Verdadeira Prosperidade</span><b>8</b></li>
+          <li class="p"><span>Parte 2 · Transformação da Mente</span><b>37</b></li>
+          <li class="p"><span>Parte 3 · Princípios Bíblicos</span><b>75</b></li>
+          <li class="p"><span>Parte 4 · Construindo Prosperidade</span><b>122</b></li>
+          <li class="p"><span>Parte 5 · Prosperidade com Propósito</span><b>167</b></li>
+          <li class="p"><span>Parte 6 · Plano de Transformação</span><b>196</b></li>
+          <li><span>Orações finais</span><b>210</b></li>
+        </ul>
+      </div>
+      <div class="fake" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="person" aria-hidden="true">
+      <svg class="me" viewBox="0 0 260 240" fill="none">
+        <path d="M0 240 L60 160 L110 195 L170 120 L230 185 L260 160 V240Z" fill="#161a30"/>
+        <circle cx="130" cy="40" r="11" fill="#0a0d18"/>
+        <path d="M130 52c-6 0-9 5-9 11v28l-16-26-6 4 18 34v34h-7v50h11l5-42 5 42h11v-50h-7V103l18-34-6-4-16 26V63c0-6-3-11-9-11z" fill="#0a0d18"/>
+      </svg>
+      <blockquote>“Com Deus, o seu futuro financeiro pode ser ainda maior do que você imagina.”</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="light excerpts" id="trechos">
+  <div class="wrap">
+    <div>
+      <div class="rule"></div>
+      <h2>TRECHOS DO LIVRO</h2>
+    </div>
+    <div class="ex-list">
+      <article class="ex">
+        <q>Se Deus é o dono, nós somos administradores. Essa mudança de posição transforma tudo.</q>
+        <cite><span>Capítulo 2</span>Deus, dinheiro e propósito</cite>
+      </article>
+      <article class="ex">
+        <q>Fé é enviar o currículo, preparar-se, orar e aceitar o resultado como vindo de um Deus sábio.</q>
+        <cite><span>Capítulo 6</span>Fé, trabalho e responsabilidade</cite>
+      </article>
+      <article class="ex">
+        <q>Nunca arrisque o que não pode perder, e nunca deixe de tentar por medo.</q>
+        <cite><span>Capítulo 9</span>Vencendo o medo financeiro</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="guar">
+      <svg viewBox="0 0 64 64" fill="none" stroke="url(#g)" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"><path d="M32 5l21 8v14c0 13-8.500 21-21 27C19.500 48 11 40 11 27V13z"/><path d="M22 31l7 7 13-14"/></svg>
+      <div><h3>Garantia<br>de 7 dias</h3><p>Se por qualquer motivo você não ficar satisfeito com o e-book, basta solicitar o reembolso e você receberá todo o seu dinheiro de volta.</p></div>
+    </div>
+    <div class="center-cta">
+      <h2>Dê o primeiro passo para uma vida mais próspera com Deus!</h2>
+      <a class="cta" data-buy href="#comprar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/></svg>Quero meu e-book agora</a>
+      <span class="only">Apenas R$ 10,00</span><span class="only alt2">≈ 127 MT &nbsp;·&nbsp; ≈ € 1,76</span>
+    </div>
+    <ul class="perks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#f1c45e" stroke-width="2" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pagamento 100% seguro</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#f1c45e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17a4.500 4.500 0 0 1 .5-9 5.500 5.500 0 0 1 10.500 1.500A3.500 3.500 0 0 1 17 17"/><path d="M12 11v8M9 16.500l3 3 3-3"/></svg>Acesso imediato</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#f1c45e" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Suporte por e-mail</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#f1c45e" stroke-width="2" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>Baixe e leia no seu celular, tablet ou computador</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Prosperar com Deus &nbsp;·&nbsp; Mais que dinheiro, uma vida com propósito</span>
+    <span class="sig">Edição Digital</span>
+  </div>
+</footer>
+<div class="legal"><div class="wrap">Este livro tem finalidade educativa e pastoral. Os exemplos e personagens são fictícios. O conteúdo não constitui recomendação individualizada de investimento, consultoria financeira, jurídica ou tributária. Todo investimento envolve risco e resultados passados não garantem resultados futuros.</div></div>
+
+<script>
+  // Cole aqui o link de pagamento do seu checkout. Todos os botões "Comprar" passam a usá-lo.
+  var CHECKOUT_URL = "https://pay.lojou.app/p/Iy4XH?via=K5i1ToZ";
+  if (CHECKOUT_URL) {
+    document.querySelectorAll("[data-buy]").forEach(function (a) { a.href = CHECKOUT_URL; a.target = "_blank"; a.rel = "noopener"; });
+  }
+</script>
+
+</body></html>
